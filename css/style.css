@@ -338,4 +338,54 @@ main .events .events__container {
   gap: 24px;
 }
 
+.how__container {
+  display: flex;
+  gap: 32px;
+}
+
+.how__container-element-one,
+.how__container-element-two {
+  position: relative;
+  width: 580px;
+  padding: 32px 112px 24px 89px;
+  background-color: rgba(151, 202, 209, 0.08);
+  margin: 24px 0 64px 0;
+}
+.how__container-element-one h4,
+.how__container-element-two h4 {
+  margin-bottom: 16px;
+}
+.how__container-element-one p,
+.how__container-element-two p {
+  margin-bottom: 16px;
+  width: 362px;
+  line-height: 24px;
+}
+.how__container-element-one a,
+.how__container-element-two a {
+  font-size: 16px;
+  color: #00798a;
+  font-weight: 400;
+}
+
+.how__container-element-one::before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: 24px;
+  width: 41px;
+  height: 41px;
+  background: url("../images/how_img/find.svg");
+}
+
+.how__container-element-two::before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: 24px;
+  width: 41px;
+  height: 41px;
+  background: url("../images/how_img/plus.svg");
+}
+
 /*# sourceMappingURL=style.css.map */
