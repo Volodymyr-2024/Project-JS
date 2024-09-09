@@ -297,3 +297,20 @@ main {
     text-align: center;
   }
 }
+//Стилизация popular
+.popular {
+  p{
+    margin: 16px 0 28px 0;
+  }
+}
+.popular__container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px;
+}
+.popular__container-element{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
