@@ -21,6 +21,7 @@ h3 {
 h4 {
   font-size: 20px;
   font-weight: 500;
+  line-height: 28px;
 }
 
 h5 {
@@ -77,6 +78,7 @@ nav .nav__left .nav__left__search-right input {
 }
 nav .nav__left .nav__left__search-right input::placeholder {
   font-size: 16px;
+  font-weight: 500;
   color: #000000;
 }
 nav .nav__left .nav__left__search-right button {
@@ -100,6 +102,7 @@ nav .nav__right .nav__right-lang {
 }
 nav .nav__right .nav__right-lang a {
   font-size: 14px;
+  font-weight: 500;
 }
 nav .nav__right .nav__right-auth {
   display: flex;
@@ -116,6 +119,7 @@ nav .nav__right .nav__right-auth button {
 }
 nav .nav__right .nav__right-auth a {
   font-size: 14px;
+  font-weight: 500;
 }
 
 main {
@@ -317,7 +321,8 @@ main .events .events__container {
   height: 20px;
 }
 .explore__categories h5 {
-  width: 79px;
+  width: 97px;
+  height: 48px;
   text-align: center;
 }
 
@@ -365,7 +370,7 @@ main .events .events__container {
 .how__container-element-two a {
   font-size: 16px;
   color: #00798a;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .how__container-element-one::before {
@@ -386,6 +391,39 @@ main .events .events__container {
   width: 41px;
   height: 41px;
   background: url("../images/how_img/plus.svg");
+}
+
+.title {
+  width: 870px;
+  margin: 16px 0 28px 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #707070;
+}
+
+.friendships__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 60px;
+}
+
+.friendships__container-element {
+  width: 376px;
+}
+.friendships__container-element h4 {
+  margin-top: 24px;
+}
+.friendships__container-element p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #707070;
+  margin: 12px 0 16px 0;
+}
+.friendships__container-element a {
+  font-size: 16px;
+  line-height: 24px;
+  color: #00798a;
 }
 
 /*# sourceMappingURL=style.css.map */

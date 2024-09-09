@@ -49,6 +49,7 @@ nav {
       }
       input::placeholder {
         font-size: 16px;
+        font-weight: 500;
         color: #000000;
       }
       button {
@@ -72,6 +73,7 @@ nav {
       gap: 4px;
       a {
         font-size: 14px;
+        font-weight: 500;
       }
     }
     .nav__right-auth {
@@ -80,6 +82,7 @@ nav {
       gap: 20px;
       button {
         font-size: 14px;
+
         padding: 8px 16px;
         color: #ffffff;
         background-color: #00798a;
@@ -88,6 +91,7 @@ nav {
       }
       a {
         font-size: 14px;
+        font-weight: 500;
       }
     }
   }
@@ -293,7 +297,8 @@ main {
     height: 20px;
   }
   h5 {
-    width: 79px;
+    width: 97px;
+    height: 48px;
     text-align: center;
   }
 }
@@ -337,7 +342,7 @@ main {
   a {
     font-size: 16px;
     color: #00798a;
-    font-weight: 400;
+    font-weight: 500;
   }
 }
 .how__container-element-one::before {
@@ -357,4 +362,37 @@ main {
   width: 41px;
   height: 41px;
   background: url("../images/how_img/plus.svg");
+}
+//Стилизация friendships
+.friendships {
+}
+.title {
+  width: 870px;
+  margin: 16px 0 28px 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #707070;
+}
+.friendships__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 60px;
+}
+.friendships__container-element {
+  width: 376px;
+  h4 {
+    margin-top: 24px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #707070;
+    margin: 12px 0 16px 0;
+  }
+  a {
+    font-size: 16px;
+    line-height: 24px;
+    color: #00798a;
+  }
 }
