@@ -190,21 +190,27 @@ main .events .events__header .events__header-right a {
   color: #00798a;
   font-weight: 500;
 }
-main .events .events__element {
+main .events .events__container {
+  display: grid;
+  grid-template-columns: 272px 272px 272px 272px;
+  gap: 36px;
+}
+
+.events__element {
   width: 272px;
   height: 399px;
 }
-main .events .events__element .events__element-description h4 {
+.events__element .events__element-description h4 {
   margin: 12px 16px 8px 0;
 }
-main .events .events__element .events__element-description .distance {
+.events__element .events__element-description .distance {
   font-size: 14px;
   color: #707070;
   height: 40px;
   display: flex;
   align-items: center;
 }
-main .events .events__element .events__element-description .data {
+.events__element .events__element-description .data {
   font-size: 14px;
   text-transform: uppercase;
   display: flex;
@@ -212,19 +218,32 @@ main .events .events__element .events__element-description .data {
   gap: 6px;
   margin: 8px 0 12px 0;
 }
-main .events .events__element .events__element-description .going {
+.events__element .events__element-description .going {
   display: flex;
 }
-main .events .events__element .events__element-description .going p {
+.events__element .events__element-description .going p {
   font-size: 16px;
   display: flex;
   align-items: center;
   gap: 6px;
 }
-main .events .events__element .events__element-description .going .going_ok {
+.events__element .events__element-description .going .going_ok {
   margin-right: 15px;
 }
-main .events .events__container {
+
+.upcoming__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0 24px 0;
+}
+.upcoming__header a {
+  font-size: 16px;
+  color: #00798a;
+  font-weight: 500;
+}
+
+.upcomig__container {
   display: grid;
   grid-template-columns: 272px 272px 272px 272px;
   gap: 36px;
