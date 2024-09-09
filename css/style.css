@@ -48,12 +48,12 @@ nav .nav__left a {
 }
 nav .nav__left .nav__left__search-left {
   display: flex;
+  align-items: center;
   width: 300px;
   height: 42px;
   border: 1px solid #d9d9d9;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  align-items: center;
 }
 nav .nav__left .nav__left__search-left input {
   border: none;
@@ -65,12 +65,12 @@ nav .nav__left .nav__left__search-left img {
 nav .nav__left .nav__left__search-right {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 300px;
   height: 42px;
   border: 1px solid #d9d9d9;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  align-items: center;
 }
 nav .nav__left .nav__left__search-right input {
   border: none;
@@ -313,9 +313,9 @@ main .events .events__container {
   height: 112px;
   background: rgba(151, 202, 209, 0.08);
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 .explore__categories img {
   width: 20px;
