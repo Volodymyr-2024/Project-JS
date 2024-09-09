@@ -103,4 +103,9 @@ nav .nav__right .nav__right-auth a {
   font-size: 14px;
 }
 
+main {
+  width: 1152px;
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=style.css.map */
