@@ -93,7 +93,41 @@ nav {
   }
 }
 // Стилизация main
-main{
-  width: 1152px;
+main {
+  width: 1196px;
   margin: 0 auto;
+  margin-top: 70px;
+ .main__people {
+  position: relative;
+    h1 {
+      margin-bottom: 24.5px;
+      width: 600px;
+      font-size: 42px;
+      font-weight: bold;
+      line-height: 52px;
+    }
+    p {
+      margin-bottom: 24px;
+      width: 608px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    button {
+      font-size: 14px;
+      padding: 8px 16px;
+      color: #ffffff;
+      background-color: #00798a;
+      border: none;
+      border-radius: 8px;
+    }
+  }
+  .main__people::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+  left: 655px;
+    width: 379px;
+    height: 269px;
+    background-image: url('../images/people.svg');
+  }
 }
