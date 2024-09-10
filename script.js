@@ -167,3 +167,10 @@ anyCategoryElement.forEach((item) => {
     createElements(sortArrayCategory);
   });
 });
+
+//Обновление элементов при клике на ссылку Events
+const Events = document.querySelector('.events__event')
+Events.addEventListener('click', () => {
+  container.innerHTML = "";
+  createElements(eventsStore);
+})
