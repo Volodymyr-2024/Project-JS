@@ -68,7 +68,10 @@ const eventsStore = [
 
 const navElement = document.querySelectorAll(".main__menu-item-btn");
 const submenuContainer = document.querySelectorAll(".submenu_container");
-
+const submenuContainerItem = document.querySelectorAll(
+  ".submenu_container__item"
+);
+//Всплывающее меню
 navElement.forEach((item, index) => {
   item.addEventListener("click", () => {
     submenuContainer[index].classList.toggle("active");
@@ -76,43 +79,91 @@ navElement.forEach((item, index) => {
     img.classList.toggle("rotate");
   });
 });
+submenuContainerItem.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    const parentContainer = item.closest(".submenu_container");
+    parentContainer.classList.toggle("active");
+    const index = Array.from(submenuContainer).indexOf(parentContainer);
+    const correspondingNavElement = navElement[index];
+    const img = correspondingNavElement.querySelector("img");
+    if (img) {
+      img.classList.toggle("rotate");
+    }
+  });
+});
 
+//Вывод элементов на страницу
 const container = document.querySelector(".container__events");
-eventsStore.forEach((item) => {
-  const eventsElement = document.createElement("div");
-  eventsElement.classList.add("events__element");
+function createElements(eventsArray) {
+  container.innerHTML = "";
+  eventsArray.forEach((item) => {
+    const eventsElement = document.createElement("div");
+    eventsElement.classList.add("events__element");
+    const containerImg = document.createElement("div");
+    containerImg.classList.add("events__element-img");
+    const containerElement = document.createElement("div");
+    containerElement.classList.add("events__element-description");
+    const img = document.createElement("img");
+    const pData = document.createElement("p");
+    const h = document.createElement("h5");
+    const pDistance = document.createElement("p");
+    const pAttendes = document.createElement("p");
+    h.innerText = item.title;
+    if (item.attendees) {
+      pAttendes.classList.add("attendes");
+      pAttendes.innerText = `${item.attendees} attendes`;
+    }
+    pData.classList.add("data");
+    const date = item.date.toString();
+    const dateWithoutGMT = date.split("GMT")[0];
+    pData.innerText = dateWithoutGMT;
+    pDistance.classList.add("distance");
+    pDistance.innerText = `${item.category} (${item.distance} км)`;
+    img.src = item.image;
+    img.alt = item.title;
+    containerElement.append(pData, h, pDistance);
+    containerElement.append(pAttendes);
+    containerImg.appendChild(img);
+    eventsElement.append(containerImg, containerElement);
+    container.appendChild(eventsElement);
+  });
+}
+createElements(eventsStore);
 
-  const containerImg = document.createElement("div");
-  containerImg.classList.add("events__element-img");
+//Фильтрация элементов
+const anyTypeElement = document.querySelectorAll(".anytype");
+const anyDistanceElement = document.querySelectorAll(".anydistance");
+const anyCategoryElement = document.querySelectorAll(".anycategory");
 
-  const containerElement = document.createElement("div");
-  containerElement.classList.add("events__element-description");
-  const img = document.createElement("img");
-  const pData = document.createElement("p");
-  const h = document.createElement("h5");
-  const pDistance = document.createElement("p");
-  const pAttendes = document.createElement("p");
+anyTypeElement.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    container.innerHTML = "";
+    const selectedType = event.target.textContent.toLowerCase();
+    const sortArray = eventsStore.filter((item) => {
+      return item.type === selectedType;
+    });
+    createElements(sortArray);
+  });
+});
 
-  h.innerText = item.title;
-  if (item.attendees) {
-    pAttendes.classList.add("attendes");
-    pAttendes.innerText = `${item.attendees} attendes`;
-  }
+anyDistanceElement.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    container.innerHTML = "";
+    const selectedDistance = Number(event.target.textContent.split(" ")[0]);
+    const sortArrayDistance = eventsStore.filter((item) => {
+      return item.distance <= selectedDistance;
+    });
+    createElements(sortArrayDistance);
+  });
+});
 
-  pData.classList.add("data");
-  const date = item.date.toString();
-  const dateWithoutGMT = date.split("GMT")[0];
-  pData.innerText = dateWithoutGMT;
-
-  pDistance.classList.add("distance");
-  pDistance.innerText = `${item.category} (${item.distance} км)`;
-
-  img.src = item.image;
-  img.alt = item.title;
-
-  containerElement.append(pData, h, pDistance, pAttendes);
-  containerImg.appendChild(img);
-  eventsElement.append(containerImg, containerElement);
-
-  container.appendChild(eventsElement);
+anyCategoryElement.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    container.innerHTML = "";
+    const anyCategoryElement = event.target.textContent;
+    const sortArrayCategory = eventsStore.filter((item) => {
+      return item.category === anyCategoryElement;
+    });
+    createElements(sortArrayCategory);
+  });
 });
