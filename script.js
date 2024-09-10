@@ -73,10 +73,6 @@ navElement.forEach((item, index) => {
   item.addEventListener("click", () => {
     submenuContainer[index].classList.toggle("active");
     const img = item.querySelector("img");
-    if (img) {
-      // img.classList.remove("arrow");
-      img.classList.toggle("rotate");
-    }
-    // img.classList.add("arrow");
+    img.classList.toggle("rotate");
   });
 });
