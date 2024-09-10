@@ -76,3 +76,43 @@ navElement.forEach((item, index) => {
     img.classList.toggle("rotate");
   });
 });
+
+const container = document.querySelector(".container__events");
+eventsStore.forEach((item) => {
+  const eventsElement = document.createElement("div");
+  eventsElement.classList.add("events__element");
+
+  const containerImg = document.createElement("div");
+  containerImg.classList.add("events__element-img");
+
+  const containerElement = document.createElement("div");
+  containerElement.classList.add("events__element-description");
+  const img = document.createElement("img");
+  const pData = document.createElement("p");
+  const h = document.createElement("h5");
+  const pDistance = document.createElement("p");
+  const pAttendes = document.createElement("p");
+
+  h.innerText = item.title;
+  if (item.attendees) {
+    pAttendes.classList.add("attendes");
+    pAttendes.innerText = `${item.attendees} attendes`;
+  }
+
+  pData.classList.add("data");
+  const date = item.date.toString();
+  const dateWithoutGMT = date.split("GMT")[0];
+  pData.innerText = dateWithoutGMT;
+
+  pDistance.classList.add("distance");
+  pDistance.innerText = `${item.category} (${item.distance} км)`;
+
+  img.src = item.image;
+  img.alt = item.title;
+
+  containerElement.append(pData, h, pDistance, pAttendes);
+  containerImg.appendChild(img);
+  eventsElement.append(containerImg, containerElement);
+
+  container.appendChild(eventsElement);
+});
