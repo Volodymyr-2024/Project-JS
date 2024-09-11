@@ -9,7 +9,7 @@ body {
 }
 nav {
   @include flex-between;
-  margin: 15px auto;
+  margin: 11px auto;
   .nav__left {
     display: flex;
     a {

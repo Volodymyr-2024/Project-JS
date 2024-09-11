@@ -5,10 +5,49 @@
 body {
   width: 1512px;
   margin: 0 auto;
+  position: relative;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 203px;
+  right: 133px;
+  width: 350px;
+  height: 285px;
+  background: url("../images/map_img/map.svg");
+}
+nav::before {
+  content: "";
+  position: absolute;
+  top: 312px;
+  right: 222px;
+  width: 172px;
+  height: 40px;
+  background: url("../images/map_img/button.svg");
+}
+.text__container {
+  position: absolute;
+  top: 145px;
+  right: 362px;
+  p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 214px;
+  right: 148px;
+  width: 15px;
+  height: 15px;
+  background: url("../images/map_img/cross.svg");
 }
 nav {
+  position: relative;
   @include flex-between;
-  margin: 15px auto;
+  margin: 11px auto;
   .nav__left {
     display: flex;
     a {
@@ -88,7 +127,7 @@ nav {
 main {
   width: 1196px;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 101px;
 }
 .main__name {
   h3 {
@@ -167,7 +206,7 @@ main {
   line-height: 20px;
   color: #7c6f50;
 }
-.distance{
+.distance {
   margin-bottom: 48px;
 }
 .distance,

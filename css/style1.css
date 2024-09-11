@@ -32,13 +32,55 @@ h5 {
 body {
   width: 1512px;
   margin: 0 auto;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 203px;
+  right: 133px;
+  width: 350px;
+  height: 285px;
+  background: url("../images/map_img/map.svg");
+}
+
+nav::before {
+  content: "";
+  position: absolute;
+  top: 312px;
+  right: 222px;
+  width: 172px;
+  height: 40px;
+  background: url("../images/map_img/button.svg");
+}
+
+.text__container {
+  position: absolute;
+  top: 145px;
+  right: 362px;
+}
+.text__container p {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 214px;
+  right: 148px;
+  width: 15px;
+  height: 15px;
+  background: url("../images/map_img/cross.svg");
 }
 
 nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 15px auto;
+  margin: 11px auto;
 }
 nav .nav__left {
   display: flex;
@@ -125,7 +167,7 @@ nav .nav__right .nav__right-auth a {
 main {
   width: 1196px;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 101px;
 }
 
 .main__name h3 {

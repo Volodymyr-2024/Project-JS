@@ -38,7 +38,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 15px auto;
+  margin: 11px auto;
 }
 nav .nav__left {
   display: flex;
