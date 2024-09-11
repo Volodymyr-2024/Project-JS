@@ -29,6 +29,12 @@ h5 {
   line-height: 24px;
 }
 
+h6 {
+  font-size: 10px;
+  line-height: 15px;
+  font-weight: 500;
+}
+
 body {
   width: 1512px;
   margin: 0 auto;
@@ -271,6 +277,7 @@ main .events .events__container {
 }
 .join h3 {
   margin: 36px 0 16px 56px;
+  padding-top: 36px;
 }
 .join p {
   margin: 0 0 16px 56px;
@@ -287,6 +294,7 @@ main .events .events__container {
   border-radius: 8px;
   font-size: 16px;
   padding: 8px 67px;
+  width: 192px;
 }
 
 .join::after {
@@ -328,6 +336,9 @@ main .events .events__container {
   text-align: center;
 }
 
+.popular h3 {
+  margin-top: 64px;
+}
 .popular p {
   margin: 16px 0 28px 0;
 }
@@ -517,10 +528,66 @@ footer .container {
   display: none;
 }
 
+.events_container {
+  display: none;
+}
+
+.events_element {
+  width: 370px;
+  display: flex;
+  gap: 8px;
+  border-top: 1px solid #d9d9d9;
+}
+.events_element .events_element-img {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.events_element-description p {
+  font-size: 9px;
+  line-height: 12px;
+  font-weight: normal;
+  color: #7c6f50;
+  padding-top: 2px;
+}
+.events_element-description span {
+  padding-top: 2px;
+  display: flex;
+  margin-left: -2px;
+  font-size: 7px;
+  color: #707070;
+  line-height: 9.7px;
+}
+
+.data_title {
+  font-size: 9px;
+  line-height: 12px;
+  font-weight: normal;
+  color: #7c6f50;
+  text-transform: uppercase;
+}
+
+.data_title {
+  margin-top: 12px;
+}
+
+.attend {
+  margin-top: 18px;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 393px) {
   body {
     width: 393px;
     margin: 0 auto;
+  }
+  h4 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+  }
+  h3 {
+    font-size: 20px;
   }
   .nav__right {
     margin-right: 35px !important;
@@ -665,7 +732,155 @@ footer .container {
   .upcoming__container {
     display: grid;
     grid-template-columns: 370px !important;
-    gap: 36px;
+    gap: 20px;
+  }
+  .events__element {
+    display: none;
+  }
+  .events_container {
+    display: block;
+  }
+  .upcoming__header h3 {
+    font-size: 20px;
+  }
+  .upcoming__header a {
+    display: none;
+  }
+  .join {
+    margin-bottom: 0;
+  }
+  .join h3 {
+    padding-top: 16px;
+    margin: 0;
+    font-size: 20px;
+    color: #212121;
+  }
+  .join p {
+    padding-right: 17px;
+    width: 350px;
+    font-size: 12px;
+    line-height: 24px;
+    margin: 137px 0 22px 0;
+  }
+  .join button {
+    margin-bottom: 15px;
+  }
+  .join::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 50px;
+    width: 238px;
+    height: 136px;
+    background: url(../images/join_meet.svg);
+    background-size: contain !important;
+    background-position: center !important;
+  }
+  .explore__container {
+    display: grid;
+    grid-template-columns: 135px 135px;
+    grid-column: 23px;
+    grid-row: 11px;
+    margin: 0 54px 0 32px;
+  }
+  .popular h3 {
+    margin-top: 64px;
+  }
+  .popular p {
+    font-size: 12px;
+    line-height: 24px;
+    width: 352px;
+    margin-bottom: 0;
+  }
+  .popular__container-element:nth-child(n+5) {
+    display: none !important;
+  }
+  .popular__container {
+    display: grid;
+    grid-template-columns: 153px 153px;
+    gap: 17px;
+    margin: 0 43px 43px 0;
+  }
+  .popular__container-element img {
+    width: 153px;
+    height: 153px;
+  }
+  .how h3 {
+    margin-bottom: 18px;
+  }
+  .how__container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .how__container-element-one,
+  .how__container-element-two {
+    width: 360px;
+    margin: 0;
+    padding: 20px 70px 15px 55px;
+  }
+  .how__container-element-one p,
+  .how__container-element-two p {
+    font-size: 10px;
+    line-height: 15px;
+    width: 225px;
+    margin: 10px 0 10px 0 !important;
+  }
+  .how__container-element-one h4,
+  .how__container-element-two h4 {
+    margin-bottom: 0;
+  }
+  .how__container-element-one a,
+  .how__container-element-two a {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .how__container-element-one::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 25px;
+    height: 25px;
+    background: url(../images/how_virtual/search.svg);
+    background-size: contain;
+    background-position: center;
+  }
+  .how__container-element-two::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 25px;
+    height: 25px;
+    background: url(../images/how_virtual/plus.svg);
+    background-size: contain;
+    background-position: center;
+  }
+  .friendships .title {
+    display: none;
+  }
+  .friendships h3 {
+    margin-bottom: 27px;
+  }
+  .friendships__container {
+    flex-direction: column;
+  }
+  .friendships__container-element h4 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .friendships__container-element p {
+    font-size: 12px;
+    line-height: 23px;
+    width: 275px;
+  }
+  .friendships__container-element a {
+    font-size: 12px;
+  }
+  .friendships__container-element img {
+    width: 340px;
+    height: 173px;
   }
 }
 
