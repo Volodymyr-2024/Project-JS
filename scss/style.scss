@@ -398,7 +398,7 @@ footer {
     width: 249px;
   }
   button {
-    font-style: 16px;
+    font-size: 16px;
     color: #ffffff;
     background: #212121;
     padding: 10px 14px;
@@ -446,7 +446,7 @@ footer {
   display: flex;
   gap: 24px;
   a {
-    font-style: 14px;
+    font-size: 14px;
     line-height: 20px;
     color: #ffffff;
   }
@@ -504,11 +504,6 @@ footer {
   body {
     width: 393px;
     margin: 0 auto;
-  }
-  nav {
-    // display: grid!important;
-    // grid-template-columns: 119px 200px;
-    // row-gap: 60px;
   }
   h4 {
     font-size: 12px;
@@ -701,7 +696,7 @@ footer {
       margin: 137px 0 22px 0;
     }
     button {
-      margin-bottom: 15px;
+      margin: 0 0 15px 73px;
     }
   }
   .join::after {
@@ -722,8 +717,8 @@ footer {
   .explore__container {
     display: grid;
     grid-template-columns: 135px 135px;
-    grid-column: 23px;
-    grid-row: 11px;
+    grid-column-gap: 23px;
+    grid-row-gap: 11px;
     margin: 0 54px 0 32px;
   }
   .popular {
@@ -829,8 +824,45 @@ footer {
       font-size: 12px;
     }
     img {
-      width: 340px;
-      height: 173px;
+      width: 364px;
+      height: 185px;
     }
+  }
+  footer {
+    .container {
+      width: 393px;
+      padding-left: 14px;
+    }
+  }
+  .head {
+    border: none;
+    button {
+      padding: 10px 14px;
+      margin: 20px 7px 20px 0px !important;
+    }
+    h5 {
+      margin-left: 4px;
+      border-bottom: 1px solid #c5c4c4;
+      padding: 35px 0;
+    }
+  }
+  .container__undermain-snags {
+    img {
+      display: none;
+    }
+  }
+  .container__main {
+    a {
+      font-size: 14px;
+    }
+  }
+  .container__main-left {
+    margin: 24px 0 41px 4px;
+  }
+  .container__main-main {
+    margin: 24px 0 16px 0;
+  }
+  .footer__footer a:nth-child(n + 2) {
+    display: none;
   }
 }
