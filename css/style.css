@@ -40,54 +40,6 @@ nav {
   align-items: center;
   margin: 11px auto;
 }
-nav .nav__left {
-  display: flex;
-}
-nav .nav__left a {
-  margin-right: 40px;
-}
-nav .nav__left .nav__left__search-left {
-  display: flex;
-  align-items: center;
-  width: 300px;
-  height: 42px;
-  border: 1px solid #d9d9d9;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-nav .nav__left .nav__left__search-left input {
-  border: none;
-  font-size: 16px;
-}
-nav .nav__left .nav__left__search-left img {
-  margin: 10px 5px 10px 10px;
-}
-nav .nav__left .nav__left__search-right {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 300px;
-  height: 42px;
-  border: 1px solid #d9d9d9;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-nav .nav__left .nav__left__search-right input {
-  border: none;
-  margin: 13px 0 13px 17px;
-}
-nav .nav__left .nav__left__search-right input::placeholder {
-  font-size: 16px;
-  font-weight: 500;
-  color: #000000;
-}
-nav .nav__left .nav__left__search-right button {
-  padding: 9px;
-  background-color: #f65858;
-  border: none;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
 nav .nav__right {
   display: flex;
   align-items: center;
@@ -120,6 +72,55 @@ nav .nav__right .nav__right-auth button {
 nav .nav__right .nav__right-auth a {
   font-size: 14px;
   font-weight: 500;
+}
+
+.nav__left {
+  display: flex;
+}
+.nav__left a {
+  margin-right: 40px;
+}
+.nav__left .nav__left__search-left {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 42px;
+  border: 1px solid #d9d9d9;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.nav__left .nav__left__search-left input {
+  border: none;
+  font-size: 16px;
+}
+.nav__left .nav__left__search-left img {
+  margin: 10px 5px 10px 10px;
+}
+.nav__left .nav__left__search-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 42px;
+  border: 1px solid #d9d9d9;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.nav__left .nav__left__search-right input {
+  border: none;
+  margin: 13px 0 13px 17px;
+}
+.nav__left .nav__left__search-right input::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+}
+.nav__left .nav__left__search-right button {
+  padding: 9px;
+  background-color: #f65858;
+  border: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 main {
@@ -510,6 +511,162 @@ footer .container {
   font-style: 14px;
   line-height: 20px;
   color: #ffffff;
+}
+
+.nav__left__search-right__ {
+  display: none;
+}
+
+@media (max-width: 393px) {
+  body {
+    width: 393px;
+    margin: 0 auto;
+  }
+  .nav__right {
+    margin-right: 35px !important;
+    gap: 18px !important;
+  }
+  .nav__right-lang img {
+    width: 17px;
+    height: 17px;
+  }
+  .nav__right-lang a {
+    font-size: 12px !important;
+  }
+  .nav__right-auth {
+    gap: 18px !important;
+  }
+  .nav__right-auth a {
+    font-size: 12px !important;
+  }
+  .nav__right-auth button {
+    font-size: 12px !important;
+    padding: 7px 13px !important;
+    border-radius: 7px !important;
+  }
+  .nav__left__search-left,
+  .nav__left__search-right {
+    display: none !important;
+  }
+  .nav__left__search-right__ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 11px 11px 20px;
+    width: 320px;
+    height: 42px;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+  }
+  .nav__left__search-right__ div {
+    display: flex;
+    align-items: center;
+  }
+  .nav__left__search-right__ img {
+    width: 22px;
+    height: 22px;
+    margin: 10px;
+  }
+  .nav__left__search-right__ input {
+    border: none;
+  }
+  .nav__left__search-right__ input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    color: #d9d9d9;
+  }
+  .nav__left__search-right__ button {
+    padding: 2px;
+    background-color: #f65858;
+    border: none;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+  .nav__left__search-right__ button img {
+    display: flex;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+  }
+  main {
+    width: 364px;
+    margin: 0 auto;
+    padding: 0 !important;
+  }
+  .main__people h1 {
+    font-size: 25px !important;
+    width: 352px !important;
+    line-height: 30.5px !important;
+    margin-bottom: 20px !important;
+  }
+  .main__people p {
+    width: 358px !important;
+    font-size: 12px !important;
+    line-height: 24px;
+    margin-bottom: 187px !important;
+  }
+  .main__people button {
+    display: none;
+  }
+  .main__people::after {
+    content: "";
+    position: absolute;
+    top: 170px !important;
+    left: 68px !important;
+    width: 215px !important;
+    height: 152px !important;
+    background: url("../images/people.svg");
+    background-size: contain !important;
+    background-position: center !important;
+  }
+  .events__header {
+    margin-bottom: 11px !important;
+  }
+  .events__header-left {
+    gap: 4px !important;
+  }
+  .events__header-left h3 {
+    font-size: 20px;
+    width: 110px;
+  }
+  .events__header-left button {
+    width: 164px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 8px 28px 6px 8px !important;
+  }
+  .events__header-left button a {
+    margin: 0 auto;
+    font-size: 13px !important;
+  }
+  .events__header-right {
+    display: none;
+  }
+  .events {
+    padding: 0 !important;
+  }
+  .events__header {
+    padding: 0 !important;
+  }
+  main .events .events__header .events__header-left button a::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 120px;
+    width: 22px;
+    height: 22px;
+    background: url(../images/events_img/event_logo.svg);
+  }
+  .events__container {
+    display: grid;
+    grid-template-columns: 370px !important;
+    gap: 36px;
+  }
+  .upcoming__container {
+    display: grid;
+    grid-template-columns: 370px !important;
+    gap: 36px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
