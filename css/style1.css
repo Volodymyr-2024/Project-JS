@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -192,6 +193,7 @@ main {
   display: flex;
   gap: 12px;
   margin-bottom: 56px;
+  overflow-x: hidden;
 }
 .main__menu button {
   font-size: 14px;
@@ -223,7 +225,7 @@ main {
 }
 
 .submenu_container__item {
-  font-size: 16px;
+  font-size: 14px;
   display: flex;
   padding: 5px 0 5px 5px;
   margin-bottom: 5px;
@@ -266,7 +268,7 @@ main {
 
 .distance,
 .attendes {
-  font-style: 14px;
+  font-size: 14px;
   line-height: 20px;
   color: #707070;
 }
@@ -503,6 +505,61 @@ footer .container {
     align-items: center;
     width: 18px;
     height: 18px;
+  }
+  main {
+    width: 364px;
+    margin: 0 auto;
+    padding: 0 !important;
+  }
+  .container__events {
+    width: 370px;
+    margin: 0 auto;
+  }
+  .main__menu {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 10px; /* Интервал между элементами */
+  }
+  /* Стили для полосы прокрутки */
+  ::-webkit-scrollbar {
+    width: 12px; /* Толщина полосы */
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Цвет дорожки */
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; /* Цвет ползунка */
+    border-radius: 10px; /* Закругление ползунка */
+    border: 2px solid #ccc; /* Отступ внутри ползунка */
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Цвет ползунка при наведении */
+  }
+  .events__element-img img {
+    width: 97px;
+    height: 54px;
+  }
+  .data {
+    font-size: 9px;
+    line-height: 12px;
+    color: #7c6f50;
+  }
+  .events__element-description h5 {
+    font-size: 10px;
+    line-height: 15px;
+    color: #212121;
+    font-weight: 500;
+  }
+  .distance {
+    font-size: 9px;
+    line-height: 12px;
+    color: #707070;
+  }
+  .attendes {
+    font-size: 7px;
+    line-height: 9.7px;
+    color: #707070;
   }
   footer .container {
     width: 393px;
