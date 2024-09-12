@@ -114,6 +114,7 @@ main {
     border: none;
     border-radius: 8px;
     margin-bottom: 98px;
+    cursor: pointer;
   }
 }
 .main__people::after {
@@ -171,6 +172,17 @@ main {
 .events__element {
   width: 272px;
   height: 399px;
+  img {
+    overflow: hidden; //Эффект
+    transition: all 0.5s ease; //Эффект
+  }
+}
+.events__element {
+  img:hover {
+    // transform: scale(1.2);
+    // transform: perspective(500px) rotateX(45deg);
+    transform: translateX(10px) scale(1.2) rotate(0deg) skewX(0deg) skewY(0deg);
+  }
 }
 .events__element-description {
   h4 {
@@ -295,6 +307,19 @@ main {
   @include flex-betw;
   margin-bottom: 64px;
 }
+
+//применение эффекта
+.popular__container-element {
+  img {
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  img:hover {
+    transform: scale(1.2);
+  }
+}
+//применение эффекта
+
 .popular__container-element {
   display: inline-flex;
   flex-direction: column;
@@ -362,6 +387,13 @@ main {
   margin-bottom: 60px;
 }
 .friendships__container-element {
+  img {
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  img:hover {
+    transform:translateX(10px) scale(1.2) rotate(0deg) skewX(0deg) skewY(0deg);
+  }
   width: 376px;
   h4 {
     margin-top: 24px;
@@ -512,7 +544,7 @@ footer {
     font-size: 20px;
   }
   .nav__right {
-    gap: 18px !important;
+    gap: 18px;
   }
   .nav__right-lang {
     img {
@@ -749,7 +781,7 @@ footer {
   }
   .how {
     h3 {
-      margin:0 0 18px 11px;
+      margin: 0 0 18px 11px;
     }
   }
   .how__container {
@@ -828,7 +860,7 @@ footer {
     }
     img {
       height: 185px;
-      margin:0 7px 0 11px;
+      margin: 0 7px 0 11px;
     }
   }
   footer {

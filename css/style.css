@@ -162,6 +162,7 @@ main {
   border: none;
   border-radius: 8px;
   margin-bottom: 98px;
+  cursor: pointer;
 }
 
 .main__people::after {
@@ -225,6 +226,14 @@ main {
 .events__element {
   width: 272px;
   height: 399px;
+}
+.events__element img {
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.events__element img:hover {
+  transform: translateX(10px) scale(1.2) rotate(0deg) skewX(0deg) skewY(0deg);
 }
 
 .events__element-description h4 {
@@ -363,6 +372,14 @@ main {
   margin-bottom: 64px;
 }
 
+.popular__container-element img {
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.popular__container-element img:hover {
+  transform: scale(1.2);
+}
+
 .popular__container-element {
   display: inline-flex;
   flex-direction: column;
@@ -437,6 +454,13 @@ main {
 
 .friendships__container-element {
   width: 376px;
+}
+.friendships__container-element img {
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.friendships__container-element img:hover {
+  transform: translateX(10px) scale(1.2) rotate(0deg) skewX(0deg) skewY(0deg);
 }
 .friendships__container-element h4 {
   margin-top: 24px;
@@ -604,7 +628,7 @@ footer .container {
     font-size: 20px;
   }
   .nav__right {
-    gap: 18px !important;
+    gap: 18px;
   }
   .nav__right-lang img {
     width: 17px;
