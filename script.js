@@ -79,7 +79,7 @@ navElement.forEach((item, index) => {
     img.classList.toggle("rotate");
   });
 });
-submenuContainerItem.forEach((item, index) => {
+submenuContainerItem.forEach((item) => {
   item.addEventListener("click", () => {
     const parentContainer = item.closest(".submenu_container");
     parentContainer.classList.toggle("active");
@@ -138,11 +138,11 @@ const anyCategoryElement = document.querySelectorAll(".anycategory");
 anyTypeElement.forEach((item) => {
   item.addEventListener("click", (event) => {
     container.innerHTML = "";
-    const selectedType = event.target.textContent.toLowerCase();
-    const sortArray = eventsStore.filter((item) => {
+    const selectedType = event.target.textContent.toLowerCase().trim();
+    const sortArrayElement = eventsStore.filter((item) => {
       return item.type === selectedType;
     });
-    createElements(sortArray);
+    createElements(sortArrayElement);
   });
 });
 
@@ -160,7 +160,7 @@ anyDistanceElement.forEach((item) => {
 anyCategoryElement.forEach((item) => {
   item.addEventListener("click", (event) => {
     container.innerHTML = "";
-    const anyCategoryElement = event.target.textContent;
+    const anyCategoryElement = event.target.textContent.trim();
     const sortArrayCategory = eventsStore.filter((item) => {
       return item.category === anyCategoryElement;
     });
@@ -169,8 +169,8 @@ anyCategoryElement.forEach((item) => {
 });
 
 //Обновление элементов при клике на ссылку Events
-const Events = document.querySelector('.events__event')
-Events.addEventListener('click', () => {
+const Events = document.querySelector(".events__event");
+Events.addEventListener("click", () => {
   container.innerHTML = "";
   createElements(eventsStore);
-})
+});
