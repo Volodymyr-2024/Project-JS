@@ -227,6 +227,10 @@ main {
   display: inline-block;
 }
 
+.main__menu-item-btn:hover {
+  background-color: #f3e0de;
+}
+
 .submenu_container {
   display: none;
   position: absolute;

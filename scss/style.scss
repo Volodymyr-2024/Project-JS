@@ -179,8 +179,6 @@ main {
 }
 .events__element {
   img:hover {
-    // transform: scale(1.2);
-    // transform: perspective(500px) rotateX(45deg);
     transform: translateX(10px) scale(1.2) rotate(0deg) skewX(0deg) skewY(0deg);
   }
 }
@@ -392,7 +390,7 @@ main {
     transition: all 0.5s ease;
   }
   img:hover {
-    transform:translateX(10px) scale(1.2) rotate(0deg) skewX(0deg) skewY(0deg);
+    transform: translateX(10px) scale(1.2) rotate(0deg) skewX(0deg) skewY(0deg);
   }
   width: 376px;
   h4 {
@@ -702,6 +700,14 @@ footer {
   }
   .events_container {
     display: block;
+  }
+  .events_element-img {
+    img:hover {
+      transform: scale(1.2);
+    }
+    img {
+      transition: all 0.5s ease;
+    }
   }
   .upcoming__header {
     h3 {
