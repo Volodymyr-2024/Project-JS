@@ -188,6 +188,10 @@ main {
   align-items: center;
   gap: 8px;
 }
+.events__header-left a {
+  color: #212121;
+  pointer-events: none;
+}
 .events__header-left button {
   background: rgba(0, 121, 138, 0.12);
   border: none;
@@ -734,6 +738,11 @@ footer .container {
   .events__header-left h3 {
     font-size: 20px;
     width: 110px;
+  }
+  .events__header-left a {
+    color: #212121;
+    cursor: pointer;
+    pointer-events: auto;
   }
   .events__header-left button {
     width: 164px !important;

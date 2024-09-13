@@ -134,6 +134,10 @@ main {
 .events__header-left {
   @include flex-between;
   gap: 8px;
+  a{
+    color: #212121;
+    pointer-events: none;
+  }
   button {
     background: rgba(0, 121, 138, 0.12);
     border: none;
@@ -653,6 +657,11 @@ footer {
       font-size: 20px;
       width: 110px;
     }
+      a{
+        color: #212121;
+        cursor: pointer;
+        pointer-events: auto;
+      }
     button {
       width: 164px !important;
       display: flex !important;
